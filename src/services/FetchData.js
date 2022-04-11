@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import axios from 'axios';
 
 const api = axios.create({
