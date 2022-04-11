@@ -10,8 +10,8 @@ const Country = ({ covid }) => {
   } = covid;
 
   console.log(covid);
-  console.log('country', covid.todayConfirmed);
-  console.log('country', covid.todayDeaths);
+  console.log('country', todayConfirmed);
+  console.log('country', todayDeaths);
   console.log('country', todayConfirmed);
 
   return (
@@ -20,7 +20,7 @@ const Country = ({ covid }) => {
       <li className="country-detail">
         <span>Total Confirmed</span>
         <small>
-          {covid.todayConfirmed}
+          {todayConfirmed}
           {/* <BsArrowRightCircle className="infos-circle" /> */}
         </small>
       </li>
