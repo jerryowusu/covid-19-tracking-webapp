@@ -21,6 +21,12 @@ const getCovidData = () => async (dispatch) => {
   }
 };
 
+const reducer = (covid = [], action) => {
+  switch (action.type) {
+    case GET_DATA: return action.covid;
+    default: return covid;
+  }
+};
 
 export { getCovidData };
 export default reducer;
