@@ -9,7 +9,7 @@ import { getCovidData } from '../redux/covidData';
 import Country from './Country';
 
 const Home = () => {
-  const country = useSelector((state) => state.country);
+  const covid = useSelector((state) => state.covid);
 
   const dispatch = useDispatch();
 
@@ -37,7 +37,7 @@ const Home = () => {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Country country={country} />} />
+        <Route path="/" element={<Country covid={covid} />} />
       </Routes>
     </div>
   );
