@@ -6,9 +6,19 @@ const getCovidData = () => async (dispatch) => {
   try {
     const response = await fetchData();
     const covid = [];
-    response.data.forEach((data) => {
+    response.data.forEach((country) => {
       covid.push({
-        data,
+        todayConfirmed: country.today_confirmed,
+        todayDeaths: country.today_deaths,
+        todayNewConfirmed: country.today_new_confirmed,
+        todayNewDeaths: country.today_new_deaths,
+        todayNewOpenCases: country.today_new_open_cases,
+        todayNewRecovered: country.today_new_recovered,
+        todayOpenCases: country.today_open_cases,
+        todayRecovered: country.today_recovered,
+        yesterdayDeaths: country.yesterday_deaths,
+        yesterdayOpenCases: country.yesterday_open_cases,
+        yesterdayRecovered: country.yesterday_recovered,
       });
     });
     dispatch({
