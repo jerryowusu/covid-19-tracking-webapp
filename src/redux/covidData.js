@@ -1,4 +1,4 @@
-import fetchData from 'services/fetchData';
+import fetchData from '../services/fetchData';
 
 const GET_DATA = 'GET_DATA';
 
