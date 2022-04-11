@@ -2,14 +2,17 @@ import PropTypes from 'prop-types';
 // import { BsArrowRightCircle } from 'react-icons/bs';
 // import './countryDetails.css';
 
-const Country = ({ country }) => {
+const Country = ({ covid }) => {
   const {
     todayConfirmed,
     todayDeaths,
     todayNewConfirmed,
-  } = country;
+  } = covid;
 
-  //   console.log(todayDeaths);
+  console.log(covid);
+  console.log('country', covid.todayConfirmed);
+  console.log('country', covid.todayDeaths);
+  console.log('country', todayConfirmed);
 
   return (
 
@@ -17,7 +20,7 @@ const Country = ({ country }) => {
       <li className="country-detail">
         <span>Total Confirmed</span>
         <small>
-          {todayConfirmed}
+          {covid.todayConfirmed}
           {/* <BsArrowRightCircle className="infos-circle" /> */}
         </small>
       </li>
@@ -43,10 +46,11 @@ const Country = ({ country }) => {
 };
 
 Country.propTypes = {
-  todayConfirmed: PropTypes.number.isRequired,
-  todayDeaths: PropTypes.number.isRequired,
-  todayNewConfirmed: PropTypes.number.isRequired,
-  country: PropTypes.objectOf.isRequired,
+  covid: PropTypes.arrayOf(PropTypes.shape({
+    todayConfirmed: PropTypes.number.isRequired,
+    todayDeaths: PropTypes.number.isRequired,
+    todayNewConfirmed: PropTypes.number.isRequired,
+  })).isRequired,
 };
 
 export default Country;
