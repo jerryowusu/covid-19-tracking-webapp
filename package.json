@@ -12,9 +12,10 @@
     "react-dom": "^18.0.0",
     "react-logger-lib": "^1.0.5",
     "react-redux": "^7.2.8",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"

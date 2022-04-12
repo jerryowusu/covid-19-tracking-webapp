@@ -1,12 +1,4 @@
-/* eslint-disable max-len */
-import axios from 'axios';
-
-const api = axios.create({
-  baseURL: 'https://api.covid19tracking.narrativa.com/api/',
-  headers: {
-    'Content-type': 'application/json',
-  },
-});
+import http from '../http-common';
 
 const today = new Date();
 const month = today.getMonth() + 1;
@@ -15,8 +7,6 @@ const day = today.getDate() - 1;
 
 const currentDate = `${year}-${month}-${day}`;
 
-// const currentDate = `${today.getFullYear()}-${(`0${today.getMonth() + 1}`).slice(-2)}-${(`0${today.getDate() - 1}`).slice(-2)}`;
+const getData = () => http.get(`/${currentDate}`);
 
-const fetchData = () => api.get(`api/${currentDate}`);
-
-export default fetchData;
+export default getData;
