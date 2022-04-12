@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
-import Home from './components/Home';
+import Global from './components/Global';
 import Country from './components/Country';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <div className="navbar">
           <li className="nav-item">
             <Link to="/home" className="nav-link">
-              Home
+              Global
             </Link>
           </li>
           <li className="nav-item">
@@ -28,7 +28,7 @@ function App() {
       </nav>
       <div className="container">
         <Switch>
-          <Route exact path={['/', '/home']} component={Home} />
+          <Route exact path={['/', '/home']} component={Global} />
           <Route path="/country" component={Country} />
         </Switch>
       </div>
