@@ -3,25 +3,17 @@ import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { GlobalData } from './redux/getCovidData';
 import Global from './components/Global';
-// import CountryInfos from './components/countryDetails/CountryInfos';
 import Navbar from './components/NavBar';
+import Country from './components/Country';
 
-const App = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(GlobalData());
-  }, []);
-
-  return (
+const App = () => (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Global />} />
-        {/* <Route path="/:id" element={<CountryInfos />} /> */}
+        <Route exact path="/" element={<Global />} />
+        <Route path="/country/:name" element={<Country />} />
       </Routes>
-    </>
-  );
-};
+    </>  
+);
 
 export default App;

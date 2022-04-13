@@ -1,63 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import Country from './Country';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { getData } from '../redux/covidData';
+import getDataFromAPI from '../redux/getCovidData';
 
 const Global = () => {
-  const covidData = useSelector((state) => state.covidReducer);
-  const [loading, setLoading] = useState(true);
+  const CountryStore = useSelector((store) => store.covidReducer);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
-  });
-
-  const [findCountry, setFindCountry] = useState('');
-  const filterCountries = covidData.filter((country) => {
-    if (findCountry === '') {
-      return country;
-    } if (country.id.includes(findCountry)) {
-      return country;
+    if (CountryStore.length === 0) {
+      getDataFromAPI()
+        .then((response) => dispatch(getData(response)));
     }
-    return '';
-  });
+  }, []);
 
-  const selectCountry = (country) => setFindCountry(country.target.value);
+  const Africa = CountryStore.filter((item) => item.continent === 'Africa');
 
   return (
-
-    <section>
-      <header className="header">
-        {/* <img className="img" src={worldMap} alt="world-map" width="60%" height="60%" /> */}
-        <div className="wrapper">
-          <h1 className="header-title">World</h1>
-          <h3 className="header-number">444,638,071</h3>
-        </div>
-      </header>
-      <form className="search-form">
-        <span className="form-span">Infections by Country</span>
-        <input className="search-input" name="search" type="text" placeholder="country" onChange={selectCountry} />
-      </form>
-      {loading === false ? (
-
-        <div className="countries">
-
-          {filterCountries.map((country) => (
-
-            <Country
-              key={country.id}
-              country={country}
-              id={country.id}
-              countryName={country.name}
-              todayConfirmed={country.today_confirmed}
-            />
-
-          ))}
-
-        </div>
-      ) : (
-        <h2>hello</h2>
-        // <img className="spin" src={spinner} alt="virus" />
-      )}
-    </section>
+    <ul className="dataUL">
+      {
+      Africa.map((country) => (
+        <Link key={country.country} to={{ pathname: `/country/${country.country}` }}>
+          <li className="countryDetails">
+            <div>
+              <h1>{country.country}</h1>
+              <br />
+              Population:
+              {' '}
+              <p>{country.population}</p>
+            </div>
+            <div>
+              <img src={country.country_flag} alt="flag" className="flag" />
+            </div>
+          </li>
+        </Link>
+      ))
+    }
+    </ul>
   );
 };
 

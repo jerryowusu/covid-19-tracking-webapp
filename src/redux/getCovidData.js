@@ -1,16 +1,29 @@
-import { getData } from './covidData';
+const getDataFromAPI = async () => {
+  const info = [];
+  const response = await fetch('https://disease.sh/v3/covid-19/countries');
+  const dataFromAPI = await response.json();
 
-const today = new Date();
+  dataFromAPI.map(({ countryInfo: { _id: id, flag }, ...data }) => {
+    const covidData = {
+      continent: data.continent,
+      country: data.country,
+      country_id: id,
+      country_flag: flag,
+      total_cases: data.cases,
+      total_deaths: data.deaths,
+      total_recovered: data.recovered,
+      total_active: data.active,
+      total_tests: data.tests,
+      population: data.population,
+      todays_cases: data.todayCases,
+      todays_deaths: data.todayDeaths,
+      todays_recovered: data.todayRecovered,
+    };
 
-const currentDate = `${today.getFullYear()}-${(`0${today.getMonth() + 1}`).slice(-2)}-${(`0${today.getDate() - 1}`).slice(-2)}`;
-export const GlobalDataFromAPI = async () => {
-  const response = await fetch(`https://api.covid19tracking.narrativa.com/api/${currentDate}`)
-    .then((res) => res.json());
-  return response;
+    return info.push(covidData);
+  });
+
+  return info;
 };
-export const GlobalData = () => async (dispatch) => {
-  const countryData = await GlobalDataFromAPI();
-  const { countries } = countryData.dates[currentDate];
-  dispatch(getData(Object.values(countries)));
-};
-export default GlobalData;
+
+export default getDataFromAPI;

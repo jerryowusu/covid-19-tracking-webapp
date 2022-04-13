@@ -10,7 +10,7 @@ export const getData = (payload) => ({
 const covidReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
-      return [...action.payload];
+      return [...state, ...action.payload];
 
     default: {
       return state;
