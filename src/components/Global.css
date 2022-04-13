@@ -20,7 +20,7 @@
     color: white;
     height: 2rem;
     padding: 0.5rem;
-    font-size: 1.3rem
+    font-size: 1.1rem
 }
 
 .search-input {
@@ -36,27 +36,16 @@
 .all-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex-wrap: wrap;
     color: white;
-    padding: 0.5rem;
+    margin-top: -0.15rem;
+    padding: 0.1rem;
     font-size: 0.7rem
 }
 
 .country-card {
     background-color: var(--pink-light);
-    /* display: flex; */
-    /* flex-direction: column; */
     height: 18vh;
-    /* border: none;  */
     color: white;
-}
-
-.country-card:nth-child(even) {
-    background-color: var(--pink-dark);
-}
-
-.country-card:nth-child(odd) {
-    background-color: var(--pink-light);
 }
 
 .country-images {
@@ -75,5 +64,9 @@
     margin-top: -2.0rem;
     text-align: right;
     font-size: 1rem;
-    padding: 0.8rem;
+    padding: 0.65rem;
+}
+
+a {
+    text-decoration: none;
 }
