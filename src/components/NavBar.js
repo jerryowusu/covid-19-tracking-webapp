@@ -12,7 +12,10 @@ const Navbar = () => {
     <nav className="navbar">
       {(location.pathname !== '/') ? (
         <Link to="/" className="back">
-          <b><FaAngleLeft /></b>
+          <b>
+            <FaAngleLeft />
+            <span className="back">Back</span>
+          </b>
         </Link>
       ) : <span className="nav-date">{newDate}</span>}
       <span className="nav-title">

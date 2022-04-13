@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import { getData } from '../redux/covidData';
 import getDataFromAPI from '../redux/getCovidData';
 import worldMap from '../img/worldmap.png';
@@ -52,11 +53,14 @@ const Global = () => {
       filteredCountries && filteredCountries.map((country) => (
         <Link key={country.country} to={{ pathname: `/country/${country.country}` }}>
           <div className="country-card">
-            <img src={country.country_flag} alt="flag" className="flag" />
-            <div className="country">
-              <h1>{country.country}</h1>
-              <p>{country.total_cases}</p>
+            <div className="country-images">
+              <img src={country.country_flag} alt="flag" className="flag" />
+              <BsArrowRightCircle className="infos-circle" />
             </div>
+            {/* <div className="country-text"> */}
+            <h1 className="text">{country.country}</h1>
+            <p className="text">{country.total_cases}</p>
+            {/* </div> */}
           </div>
         </Link>
       ))
@@ -65,11 +69,14 @@ const Global = () => {
       filteredCountries.length === 0 && covidData.map((country) => (
         <Link key={country.country} to={{ pathname: `/country/${country.country}` }}>
           <div className="country-card">
-            <img src={country.country_flag} alt="flag" className="flag" />
-            <div className="country">
-              <h1>{country.country}</h1>
-              <p>{country.total_cases}</p>
+            <div className="country-images">
+              <img src={country.country_flag} alt="flag" className="flag" />
+              <BsArrowRightCircle className="infos-circle" />
             </div>
+            {/* <div className="country-text"> */}
+            <h1 className="text">{country.country}</h1>
+            <p className="text">{country.total_cases}</p>
+            {/* </div> */}
           </div>
         </Link>
       ))

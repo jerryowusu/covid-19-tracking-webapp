@@ -4,4 +4,10 @@
     background-color: #a32656; 
     color: #fff;
     font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+.back {
+    color: #fff;
+    font-size: 1.1rem;
 }
