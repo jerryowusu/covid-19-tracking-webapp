@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaAngleLeft } from 'react-icons/fa';
+import './Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
   const date = new Date();
-  const newDate = `${date.getFullYear()}/${date.getMonth()}/${date.getDay()}`;
+  const newDate = `${date.getFullYear()}`;
 
   return (
     <nav className="navbar">
