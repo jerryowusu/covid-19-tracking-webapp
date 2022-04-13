@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import getDataFromAPI from '../redux/getCovidData';
 import { getData } from '../redux/covidData';
+import './Country.css';
 
 const Country = () => {
   const covidData = useSelector((store) => store.covidReducer);
@@ -19,53 +21,86 @@ const Country = () => {
   });
 
   return (
-    <div className="dataContainer">
-      <div className="flag">
-        <img src={locateCountry.country_flag} alt="" />
-      </div>
-      <ul className="today">
-        <h3>Today&apos;s update:</h3>
-        <li>
-          New cases:
-          {' '}
-          {locateCountry.todays_cases}
-        </li>
-        <li>
-          Confirmed deaths:
-          {' '}
-          {locateCountry.todays_deaths}
-        </li>
-        <li>
-          New Recoveries:
-          {' '}
-          {locateCountry.todays_recovered}
-        </li>
-      </ul>
-      <ul className="total">
-        <h3>Total:</h3>
+    <div className="data-container">
+      <header className="header">
+        <div className="flag">
+          <img src={locateCountry.country_flag} alt="" />
+        </div>
+        <div className="wrapper">
+          <h1 className="header-title">{locateCountry.country}</h1>
+          <h3 className="header-number">{locateCountry.population}</h3>
+        </div>
+      </header>
+      <ul className="list-info">
         <li>
           Confirmed cases:
-          {locateCountry.total_cases}
+          <div className="number">
+            {locateCountry.total_cases}
+            <BsArrowRightCircle className="infos-circle" />
+          </div>
         </li>
         <li>
           Recovered:
           {' '}
-          {locateCountry.total_recovered}
+          <div className="number">
+            {locateCountry.total_recovered}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
         </li>
         <li>
           Active Cases:
           {' '}
-          {locateCountry.total_active}
+          <div className="number">
+            {locateCountry.total_active}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
         </li>
         <li>
           Total Tests:
           {' '}
-          {locateCountry.total_tests}
+          <div className="number">
+            {locateCountry.total_tests}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
         </li>
         <li>
           Deaths:
           {' '}
-          {locateCountry.total_deaths}
+          <div className="number">
+            {locateCountry.total_deaths}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
+        </li>
+        <li>
+          New cases:
+          {' '}
+          <div className="number">
+            {locateCountry.todays_cases}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
+        </li>
+        <li>
+          Confirmed deaths:
+          {' '}
+          <div className="number">
+            {locateCountry.todays_deaths}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
+        </li>
+        <li>
+          New Recoveries:
+          {' '}
+          <div className="number">
+            {locateCountry.todays_recovered}
+            <BsArrowRightCircle className="infos-circle" />
+            {' '}
+          </div>
         </li>
       </ul>
     </div>
