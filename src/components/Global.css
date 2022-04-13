@@ -1,0 +1,75 @@
+:root {
+    --pink-primary: #ec4c8a;
+    --pink-light: #fd5193;
+    --pink-dark: #ce4176;
+    --pink-darker: #a32656;
+    --blue-light: #5687e4
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--pink-light);
+    color: white;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--pink-dark);
+    color: white;
+    height: 2rem;
+    padding: 0.5rem;
+    font-size: 1.3rem
+}
+
+.search-input {
+    width: 14rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--pink-darker);
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.all-cards:nth-child(4n + 0) {
+    background-color: var(--pink-darker);
+  }
+  
+  .all-cards:nth-child(4n + 1) {
+    background-color: var(--pink-dark);
+  }
+  
+  .all-cards:nth-child(4n + 2) {
+    background-color: var(--pink-light);
+  }
+  
+  .all-cards:nth-child(4n + 3) {
+    background-color: var(--pink-light);
+  }
+
+.all-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    height: 2rem;
+    padding: 0.5rem;
+    font-size: 0.8rem
+}
+
+.country-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    padding: 0.5rem;
+    width: 60vh;
+    border: none;
+}
+
+
+.flag {
+   width: 25%;
+}

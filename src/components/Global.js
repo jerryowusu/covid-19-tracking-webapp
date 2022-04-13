@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getData } from '../redux/covidData';
 import getDataFromAPI from '../redux/getCovidData';
-// import spinner from '../img/virus.png';
 import worldMap from '../img/worldmap.png';
+import './Global.css';
 
 const Global = () => {
   const covidData = useSelector((store) => store.covidReducer);
@@ -47,19 +47,16 @@ const Global = () => {
         <input className="search-input" name="search" type="text" placeholder="country" onChange={selectCountry} />
       </form>
 
-      <ul className="dataUL">
+      <ul className="all-cards">
         {
       filteredCountries && filteredCountries.map((country) => (
         <Link key={country.country} to={{ pathname: `/country/${country.country}` }}>
-          <div>
-            <h1>{country.country}</h1>
-            <br />
-            Total Infections:
-            {' '}
-            <p>{country.total_cases}</p>
-          </div>
-          <div>
+          <div className="country-card">
             <img src={country.country_flag} alt="flag" className="flag" />
+            <div className="country">
+              <h1>{country.country}</h1>
+              <p>{country.total_cases}</p>
+            </div>
           </div>
         </Link>
       ))
@@ -67,15 +64,12 @@ const Global = () => {
         {
       filteredCountries.length === 0 && covidData.map((country) => (
         <Link key={country.country} to={{ pathname: `/country/${country.country}` }}>
-          <div>
-            <h1>{country.country}</h1>
-            <br />
-            Total Infections:
-            {' '}
-            <p>{country.total_cases}</p>
-          </div>
-          <div>
+          <div className="country-card">
             <img src={country.country_flag} alt="flag" className="flag" />
+            <div className="country">
+              <h1>{country.country}</h1>
+              <p>{country.total_cases}</p>
+            </div>
           </div>
         </Link>
       ))
