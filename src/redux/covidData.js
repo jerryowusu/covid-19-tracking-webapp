@@ -1,30 +1,21 @@
-import getData from '../services/fetchData';
-
 const GET_DATA = 'GET_DATA';
 
 const initialState = [];
 
-const getCovidData = () => async (dispatch) => {
-  try {
-    const response = await getData();
-    dispatch({
-      type: GET_DATA,
-      payload: response.data,
-    });
-  } catch (err) {
-    // return Promise.reject(err);
-    console.log(err);
-  }
-};
+export const getData = (payload) => ({
+  type: GET_DATA,
+  payload,
+});
 
-const reducer = (data = initialState, action) => {
-  const { type, payload } = action;
-  switch (type) {
+const covidReducer = (state = initialState, action) => {
+  switch (action.type) {
     case GET_DATA:
-      return payload;
-    default: return data;
+      return [...action.payload];
+
+    default: {
+      return state;
+    }
   }
 };
 
-export { getCovidData };
-export default reducer;
+export default covidReducer;

@@ -1,39 +1,27 @@
-import React from 'react';
-import './App.css';
-import {
-  BrowserRouter as Router, Switch, Route, Link,
-} from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import { GlobalData } from './redux/getCovidData';
 import Global from './components/Global';
-import Country from './components/Country';
+// import CountryInfos from './components/countryDetails/CountryInfos';
+import Navbar from './components/NavBar';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(GlobalData());
+  }, []);
+
   return (
-    <Router>
-      <nav>
-        <a href="/home" className="navbar">
-          JayKoder
-        </a>
-        <div className="navbar">
-          <li className="nav-item">
-            <Link to="/home" className="nav-link">
-              Global
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/country" className="nav-link">
-              Country
-            </Link>
-          </li>
-        </div>
-      </nav>
-      <div className="container">
-        <Switch>
-          <Route exact path={['/', '/home']} component={Global} />
-          <Route path="/country" component={Country} />
-        </Switch>
-      </div>
-    </Router>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Global />} />
+        {/* <Route path="/:id" element={<CountryInfos />} /> */}
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;
