@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -18,15 +17,6 @@ const Global = () => {
 
   // const [loading, setLoading] = useState(true);
   const [findCountry, setFindCountry] = useState('');
-
-  // const filterCountries = covidData.filter((country) => {
-  //   if (findCountry === '') {
-  //     return country;
-  //   } if (country.id.includes(findCountry)) {
-  //     return country;
-  //   }
-  //   return '';
-  // });
 
   const filteredCountries = [];
 
@@ -55,9 +45,9 @@ const Global = () => {
           <div>
             <h1>{country.country}</h1>
             <br />
-            Population:
+            Total Infections:
             {' '}
-            <p>{country.population}</p>
+            <p>{country.total_cases}</p>
           </div>
           <div>
             <img src={country.country_flag} alt="flag" className="flag" />
@@ -71,9 +61,9 @@ const Global = () => {
           <div>
             <h1>{country.country}</h1>
             <br />
-            Population:
+            Total Infections:
             {' '}
-            <p>{country.population}</p>
+            <p>{country.total_cases}</p>
           </div>
           <div>
             <img src={country.country_flag} alt="flag" className="flag" />
