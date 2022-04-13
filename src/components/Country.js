@@ -20,6 +20,9 @@ const Country = () => {
 
   return (
     <div className="dataContainer">
+      <div className="flag">
+        <img src={locateCountry.country_flag} alt="" />
+      </div>
       <ul className="today">
         <h3>Today&apos;s update:</h3>
         <li>
@@ -42,7 +45,6 @@ const Country = () => {
         <h3>Total:</h3>
         <li>
           Confirmed cases:
-          {' '}
           {locateCountry.total_cases}
         </li>
         <li>
