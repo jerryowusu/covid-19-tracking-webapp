@@ -18,7 +18,6 @@ const Global = () => {
     }
   }, []);
 
-  // const [loading, setLoading] = useState(true);
   const [findCountry, setFindCountry] = useState('');
 
   const filteredCountries = [];

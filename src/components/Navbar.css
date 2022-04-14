@@ -1,15 +1,15 @@
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: #a32656; 
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #a32656;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.5rem;
 }
 
 .back {
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.2rem;
-    margin: 0.3rem;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  margin: 0.3rem;
 }
