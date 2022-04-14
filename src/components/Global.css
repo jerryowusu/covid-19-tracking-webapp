@@ -27,7 +27,7 @@
     width: 14rem;
     border: none;
     border-radius: 0.5rem;
-    color: var(--pink-darker);
+    /* color: var(--pink-darker); */
     font-size: 1.3rem;
     padding: 0.5rem;
     outline: none;
@@ -36,14 +36,30 @@
 .all-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: var(--pink-light);
     color: white;
     margin-top: -0.15rem;
     padding: 0.1rem;
     font-size: 0.7rem
 }
 
+a:nth-child(4n) {
+    background-color: var(--pink-dark);
+}
+
+a:nth-child(4n+1) {
+    background-color: var(--pink-dark);
+}
+
+a:nth-child(4n+2) {
+    background-color: var(--pink-darker);
+}
+
+a:nth-child(4n+3) {
+    background-color: var(--pink-darker);
+}
+
 .country-card {
-    background-color: var(--pink-light);
     height: 18vh;
     color: white;
 }
