@@ -1,9 +1,9 @@
 :root {
-    --pink-primary: #ec4c8a;
-    --pink-light: #fd5193;
-    --pink-dark: #ce4176;
-    --pink-darker: #a32656;
-    --blue-light: #5687e4
+    --pink-light: #fe7f9c;
+    --pink-dark: #f64a8a;
+    --pink-darker: #ce4176;
+    --blue-light: #5687e4;
+    --white: #fff;
 }
 
 .header {
@@ -27,7 +27,6 @@
     width: 14rem;
     border: none;
     border-radius: 0.5rem;
-    /* color: var(--pink-darker); */
     font-size: 1.3rem;
     padding: 0.5rem;
     outline: none;
