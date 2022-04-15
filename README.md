@@ -2,7 +2,7 @@
 
 # Covid-19-Tracking-webapp
 
-This is a web application for a project uses the real COVID-19 data from Narrativa API. It is mobile application for a tracking Covid 19 data globally and for each country. The application allows users select country and find specific data related to that particular country. It was build using React and Redux libraries..
+This is a web application for a project that uses the real COVID-19 data from Narrativa API. It is mobile application for a tracking Covid 19 data globally and for each country. The application allows users select country and find specific data related to that particular country. It was build using React and Redux libraries..
 
 The data for this website is fetched from the following:
 - https://disease.sh/v3/covid-19/countries
@@ -24,7 +24,7 @@ The data for this website is fetched from the following:
 [live demo] [Heroku App](https://jcovid-19-tracker-app.herokuapp.com/).
 
 ## 📹 Video Presentation
-[Video Presentation](https://www.loom.com/share/0c110c5e2bb3412aa7ddfe22c227ab60)
+[Video Presentation](https://www.loom.com/share/62d60814a7d94228a1b81ab4f47c6a25)
 
 ## Getting Started
 
