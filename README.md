@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid-19-Tracking-webapp
 
-## Available Scripts
+This is a web application for a project uses the real COVID-19 data from Narrativa API. It is mobile application for a tracking Covid 19 data globally and for each country. The application allows users select country and find specific data related to that particular country. It was build using React and Redux libraries..
 
-In the project directory, you can run:
+The data for this website is fetched from the following:
+- https://disease.sh/v3/covid-19/countries
 
-### `npm start`
+## Screenshots
+![Screenshot (58)](https://user-images.githubusercontent.com/65233860/163498406-4a16b80b-36a8-4054-9144-d9c6e9c041d2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screenshot (59)](https://user-images.githubusercontent.com/65233860/163498542-cfabbcd1-91f1-41a7-b1f0-7af0a49624ef.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React
+- JavaScript
+- Redux
+- CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live demo
 
-### `npm run build`
+[live demo] [Heroku App](https://jcovid-19-tracker-app.herokuapp.com/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📹 Video Presentation
+[Video Presentation](https://www.loom.com/share/0c110c5e2bb3412aa7ddfe22c227ab60)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running follow these simple example steps:
+- Open Terminal.
+- Change the current working directory to the location you want the cloned directory.
+- Enter the following:
+```
+$ git clone https://github.com/jerryowusu/covid-19-tracking-webapp.git
+```
+- Press Enter to create your local clone.
+- Navigate to the cloned repository by running:
+```
+$ cd covid-19-tracking-webapp
+```
+- Install all dependencies using:
+``` 
+$ npm install
+```
+- Run local server using:
+``` 
+$ npm start
+```
 
-### `npm run eject`
+### Prerequisites
+- GitHub
+- Git
+- React
+- Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👤 **Jerryowusu**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- GitHub: [@jerryowusu](https://github.com/jerryowusu)
+- Twitter: [@jerryowusu11](https://twitter.com/jerryowusu11)
+- LinkedIn: [Jerry Owusu](https://www.linkedin.com/in/jerry-owusu)
 
-## Learn More
+## Contributors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues, and feature requests are welcome!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to check the [issues page](https://github.com/jerryowusu/covid-19-tracking-webapp/issues).
 
-### Code Splitting
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) whose design template was used for this project.
 
-### Analyzing the Bundle Size
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give a ⭐️ if you like our website!
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This project is [MIT](./LICENSE) licensed.
+- This project is [creativecommons](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
