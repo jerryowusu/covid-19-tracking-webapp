@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render App renders correctly 1`] = `
+Array [
+  <nav
+    className="navbar"
+  >
+    <span
+      className="nav-date"
+    >
+      2022
+    </span>
+    <span
+      className="nav-title"
+    >
+      covid 19
+      /
+    </span>
+  </nav>,
+  <section>
+    <header
+      className="header"
+    >
+      <img
+        alt="world-map"
+        className="img"
+        height="60%"
+        src="worldmap.png"
+        width="60%"
+      />
+      <div
+        className="wrapper"
+      >
+        <h1
+          className="header-title"
+        >
+          World
+        </h1>
+        <h3
+          className="header-number"
+        >
+          444,638,071
+        </h3>
+      </div>
+    </header>
+    <form
+      className="search-form"
+    >
+      <span
+        className="form-span"
+      >
+        Infections by Country
+      </span>
+      <input
+        className="search-input"
+        name="search"
+        onChange={[Function]}
+        placeholder="country"
+        type="text"
+      />
+    </form>
+    <ul
+      className="all-cards"
+    />
+  </section>,
+]
+`;
