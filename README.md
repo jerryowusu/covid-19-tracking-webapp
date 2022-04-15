@@ -21,7 +21,7 @@ The data for this website is fetched from the following:
 
 ## Live demo
 
-[live demo] [Heroku App](https://jcovid-19-tracker-app.herokuapp.com/).
+[Live demo](https://jcovid-19-tracker-app.herokuapp.com/).
 
 ## 📹 Video Presentation
 [Video Presentation](https://www.loom.com/share/62d60814a7d94228a1b81ab4f47c6a25)
